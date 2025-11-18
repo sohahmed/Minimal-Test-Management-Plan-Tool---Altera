@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Case Management Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="outer-panel">
+    <div class="header">
+      <h1>TEST CASES</h1>
+    </div>
+    <div class="main-row">
+      <div class="sidebar">
+        <button class="add-btn" onclick="showUploadModal()">+</button>
+        <input type="file" id="requirementFileInput" style="display: none;">
+        <div class="test-list" id="testList"></div>
+        <div class="expand-arrow">&#8594;</div>
+      </div>
+      <div class="detail-panel" id="detailPanel">
+        <span class="no-tests">No test case selected</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Requirement Document Upload -->
+  <div id="uploadModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span>Upload Requirement Document (.txt, .pdf, .docx):<br></span>
+      <input type="file" id="fileInput" accept=".txt,.pdf,.docx">
+      <br><br>
+      <button onclick="handlePlanUpload()">Create Plan</button>
+      <button onclick="closeUploadModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
